@@ -4,16 +4,15 @@ public class Main {
 
         System.out.println(veryLongString.replace("um", "HUM"));
 
-        System.out.println(veryLongString.indexOf("aliquip"));
 
-        String sub1 = veryLongString.substring(0, 206);
-        String sub2 = veryLongString.substring(207);
+        String sub1 = veryLongString.substring(0, veryLongString.indexOf("aliquip"));
+        String sub2 = veryLongString.substring(veryLongString.indexOf("aliquip"));
 
         System.out.println(sub1.trim());
         System.out.println(sub2.trim());
 
-        System.out.println(sub1.indexOf("est"));
-        System.out.println(sub2.indexOf("est"));
+        System.out.println( (sub1.contains("est") ^ sub2.contains("est")));
+
 
     }
 }
